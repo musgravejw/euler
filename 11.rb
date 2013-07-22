@@ -26,20 +26,25 @@ grid.push [01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 1
 # iterate through the grid
 for y in 0..20
 	for x in 0..20
-		adj = [1, 1, 1, 1, 1]		
+		adj = [1, 1, 1, 1]		
 		# check each direction
 		unless grid[y].nil?
-			for i in 0...4
-				if !grid[y+i].nil? && !grid[y+i][x-i].nil?
-					adj[0] *= grid[y+i][x-i]
-				elsif !grid[y][x+i].nil?
-					adj[1] *= grid[y][x+i]
-				elsif !grid[y+i].nil? && !grid[y+i][x].nil?
-					adj[2] *= grid[y+i][x]
-				elsif !grid[y+i].nil? && !grid[y+i][x+i].nil?
-					adj[3] *= grid[y+i][x+i]
+			for i in 0...4				
+				if !grid[y][x+i].nil?
+					adj[0] *= grid[y][x+i]
 				end
-				# there is a bug in this condition, for some reason?
+				
+				if !grid[y+i].nil? && !grid[y+i][x].nil?
+					adj[1] *= grid[y+i][x]
+				end
+				
+				if !grid[y+i].nil? && !grid[y+i][x+i].nil?
+					adj[2] *= grid[y+i][x+i]
+				end
+				
+				if !grid[y+i].nil? && !grid[y+i][x-i].nil?
+					adj[3] *= grid[y+i][x-i]
+				end				
 			end			
 		end
 		

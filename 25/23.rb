@@ -1,5 +1,4 @@
 # find the sum of all the positive integers which cannot be written as the sum of two abundant numbers
-# iterative solution, takes forever, because this is running in exponential time.
 
 sum = 0
 a = []

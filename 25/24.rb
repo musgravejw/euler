@@ -13,7 +13,7 @@ def lex
               for g in 0..9
                 for h in 0..9
                   for i in 0..9
-				    for a in 0..9
+                    for a in 0..9
                       str = "#{a}#{b}#{c}#{d}#{e}#{f}#{g}#{h}#{i}"
                       temp = [a, b, c, d, e, f, g, h, i]
                       puts str
@@ -29,7 +29,7 @@ def lex
                         puts str
                         return str				      
                       end
-					end
+                    end
                   end
                 end
               end

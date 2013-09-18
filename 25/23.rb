@@ -23,7 +23,7 @@ def sum_of_abundant(n, a)
   for i in 0..a.size
     for j in 0..a.size
       unless a[i].nil? || a[j].nil?
-        if a[i] + a[j] == n					
+        if a[i] + a[j] == n          
           return true
         end
       end
@@ -33,14 +33,14 @@ def sum_of_abundant(n, a)
 end
 
 
-for i in 1..28123	
+for i in 1..28123  
   if !sum_of_abundant(i, a)
     sum += i
   end
 
   if abundant(i)
     a.push i
-  end	
+  end  
 end
 
 puts sum

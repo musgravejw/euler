@@ -9,15 +9,15 @@ for d in 2...10
   
   str.split('').each do |s|
     unless a.include? s
-	  a.push s
-	else
-	  break
-	end
+    a.push s
+  else
+    break
+  end
   end
   
   if a.size > size
     n = d
-	size = a.size
+  size = a.size
   end
 end
 

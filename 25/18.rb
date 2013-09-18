@@ -19,18 +19,18 @@ a.push [63, 66, 04, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31]
 a.push [04, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 04, 23]
 
 a.each do |n|
-	current = 0	
-	current_index = 0
-	
-	for i in 0..n.size - 1	
-		if n[i] > current && ((i - parent_index == 0) || ((i > parent_index) && (i - parent_index) == 1))
-			current = n[i]
-			current_index = i
-		end
-	end
-	
-	parent_index = current_index
-	j.push current	
+  current = 0  
+  current_index = 0
+  
+  for i in 0..n.size - 1  
+    if n[i] > current && ((i - parent_index == 0) || ((i > parent_index) && (i - parent_index) == 1))
+      current = n[i]
+      current_index = i
+    end
+  end
+  
+  parent_index = current_index
+  j.push current  
 end
 
 puts j
